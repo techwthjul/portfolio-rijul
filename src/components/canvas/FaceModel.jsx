@@ -1,30 +1,41 @@
-// src/components/canvas/FaceModel.jsx
-
 import React, { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF, useAnimations } from "@react-three/drei";
-import CanvasLoader from "../Loader"; // Make sure you have this loader component
+
+import CanvasLoader from "../Loader"; // Assuming you have this loader component
 
 const FaceModelObject = ({ isMobile }) => {
   const group = useRef();
   const { scene, animations } = useGLTF("./FaceModel.glb");
   const { actions } = useAnimations(animations, group);
 
+  // This hook plays the animation
   useEffect(() => {
-    // Find the correct animation name by logging the actions object
+    // If "Take 001" doesn't work, find the correct animation name by logging the actions object
     // console.log(Object.keys(actions)); 
-    if (actions["Take 001"]) { // Replace "Take 001" with your actual animation name if different
+    if (actions["Take 001"]) { // Replace "Take 001" with your actual animation name if needed
         actions["Take 001"].play();
     }
   }, [actions]);
 
   return (
+    // Use a group to apply animations to the model
     <group ref={group} dispose={null}>
       <primitive
         object={scene}
-        scale={isMobile ? 8 : 12} // Adjust this scale as needed
-        position={isMobile ? [0, -2, 0] : [0, -2.5, 0]} // Adjust this position as needed
-        rotation={[0, 0.5, 0]}
+        
+        // ## ADJUST SCALE HERE ##
+        // This number makes the model bigger or smaller.
+        scale={isMobile ? 9 : 12} 
+        
+        // ## ADJUST POSITION HERE ##
+        // The second number (Y-axis) moves the model up or down.
+        // A less negative number (like -1.8) moves it UP.
+        // A more negative number (like -2.5) moves it DOWN.
+        position={isMobile ? [0, -1.8, 0] : [0, -1.8, 0]} 
+        
+        // This rotates the model side-to-side for a better angle.
+        rotation={[0, 0.4, 0]}
       />
     </group>
   );
@@ -55,10 +66,13 @@ const FaceCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
+        {/* Lights are essential for the model to be visible */}
         <ambientLight intensity={0.5} />
         <directionalLight position={[5, 5, 5]} intensity={1} />
+
         <FaceModelObject isMobile={isMobile} />
       </Suspense>
+
       <Preload all />
     </Canvas>
   );

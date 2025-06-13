@@ -1,6 +1,6 @@
-import { BrowserRouter } from "react-router-dom";
+// src/App.jsx
 
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
+//... imports
 
 const App = () => {
   return (
@@ -12,7 +12,8 @@ const App = () => {
         </div>
         <About />
         <Experience />
-        <Tech />
+        {/* Temporarily comment this out to reduce the number of canvases */}
+        {/* <Tech /> */}
         <Works />
         <Feedbacks />
         <div className='relative z-0'>
@@ -22,8 +23,6 @@ const App = () => {
       </div>
     </BrowserRouter>
   );
-}
+};
 
 export default App;
-
-
