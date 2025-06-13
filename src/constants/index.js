@@ -3,31 +3,30 @@ import {
   backend,
   creator,
   web,
-  javascript,
-  typescript,
-  html,
-  css,
-  reactjs,
-  redux,
-  tailwind,
-  nodejs,
-  mongodb,
-  git,
-  figma,
   docker,
+  git,
   meta,
   starbucks,
   tesla,
   shopify,
-  carrent,
-  jobit,
-  tripguide,
   threejs,
   flightFare,
   eltPipeline,
   cyberPulse,
   sqlProject,
   electricity,
+  // Data science tech imports
+  aws,
+  azure,
+  databricks,
+  mongodb,
+  pandas,
+  powerbi,
+  python,
+  snowflake,
+  spark,
+  sql,
+  tableau,
 } from "../assets";
 
 export const navLinks = [
@@ -66,56 +65,56 @@ const services = [
 
 const technologies = [
   {
-    name: "HTML 5",
-    icon: html,
+    name: "Python",
+    icon: python,
   },
   {
-    name: "CSS 3",
-    icon: css,
+    name: "SQL",
+    icon: sql,
   },
   {
-    name: "JavaScript",
-    icon: javascript,
+    name: "AWS",
+    icon: aws,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
+    name: "Azure",
+    icon: azure,
   },
   {
-    name: "React JS",
-    icon: reactjs,
+    name: "Databricks",
+    icon: databricks,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "Snowflake",
+    icon: snowflake,
   },
   {
-    name: "Tailwind CSS",
-    icon: tailwind,
+    name: "Tableau",
+    icon: tableau,
   },
   {
-    name: "Node JS",
-    icon: nodejs,
+    name: "Power BI",
+    icon: powerbi,
+  },
+  {
+    name: "Pandas",
+    icon: pandas,
+  },
+  {
+    name: "Spark",
+    icon: spark,
+  },
+  {
+    name: "Docker",
+    icon: docker,
   },
   {
     name: "MongoDB",
     icon: mongodb,
   },
   {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
+    name: "Git",
     icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
   },
 ];
 
@@ -136,7 +135,7 @@ const experiences = [
   },
   {
     title: "Teaching Assistant",
-    company_name: "Tesla",
+    company_name: "Syracuse University",
     icon: tesla,
     iconBg: "#E6DEDD",
     date: "Jan 2021 - Feb 2022",
