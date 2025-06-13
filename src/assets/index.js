@@ -16,7 +16,7 @@ import git from "./tech/git.png";
 import mongodb from "./tech/mongodb.png";
 import pandas from "./tech/pandas.svg";
 import powerbi from "./tech/power bi.png";
-import python from "./tech/python.png"; // You need to add this file
+import python from "./tech/python.png";
 import snowflake from "./tech/snowflake.png";
 import spark from "./tech/spark.webp";
 import sql from "./tech/sql.webp";
@@ -25,11 +25,10 @@ import tableau from "./tech/Tableau_Symbol.png";
 // Keep threejs for 3D functionality
 import threejs from "./tech/threejs.svg";
 
-// Company logos
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+// Company logos - UPDATED
+import iconsult from "./company/starbucks.png"; // Using starbucks as placeholder for iConsult
+import syracuse from "./company/Syracuse_Orange_logo.svg";
+import ltimindtree from "./company/lti.png";
 
 // Legacy project images (if you still need them)
 import carrent from "./carrent.png";
@@ -68,10 +67,9 @@ export {
   tableau,
   threejs,
   // Companies
-  meta,
-  shopify,
-  starbucks,
-  tesla,
+  iconsult,
+  syracuse,
+  ltimindtree,
   // Legacy projects
   carrent,
   jobit,
