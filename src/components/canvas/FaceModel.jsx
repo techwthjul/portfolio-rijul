@@ -6,34 +6,37 @@ import CanvasLoader from "../Loader";
 
 const FaceModelObject = ({ isMobile }) => {
   const group = useRef();
+  // ## 1. LOADS ANIMATIONS ##
+  // useGLTF loads both the 3D scene AND any animations embedded in the .glb file.
   const { scene, animations } = useGLTF("./FaceModel.glb");
+
+  // ## 2. CONNECTS ANIMATIONS TO THE MODEL ##
+  // The useAnimations hook prepares the animations for playback on your model.
   const { actions } = useAnimations(animations, group);
 
+  // ## 3. PLAYS THE ANIMATION ##
+  // This useEffect hook runs once and finds the animation named "Take 001" (or similar) and plays it.
   useEffect(() => {
-    // Plays the model's animation
     if (actions["Take 001"]) {
         actions["Take 001"].play();
     }
   }, [actions]);
 
   return (
+    // The "ref={group}" is what links the model to the useAnimations hook.
     <group ref={group} dispose={null}>
       <primitive
         object={scene}
-        // This value controls the size of the model
         scale={isMobile ? 9 : 12}
-        
-        // ## THIS IS THE VALUE TO ADJUST ##
-        // This controls the model's height. A less negative number (like -1.0) moves it UP.
-        position={isMobile ? [0, -1.2, 0] : [0, -1.2, 0]}
-
-        // This controls the side-to-side rotation
+        // This is the position to adjust to frame the face correctly.
+        position={isMobile ? [0, 0.2, 0] : [0, 0.2, 0]}
         rotation={[0, 0.4, 0]}
       />
     </group>
   );
 };
 
+// The rest of the file sets up the canvas environment
 const FaceCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
