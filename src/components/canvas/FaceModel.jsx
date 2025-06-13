@@ -1,44 +1,34 @@
+// src/components/canvas/FaceModel.jsx
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+
 import CanvasLoader from "../Loader";
 
-const Face = () => {
-  const model = useGLTF("./model_rij.glb");
+const FaceModel = () => {
+  const model = useGLTF("./model_rij.glb"); // ✅ public/model_rij.glb must exist
   return (
-    <primitive
-      object={model.scene}
-      scale={1.5}
-      position={[0, -1.2, 0]}
-      rotation={[0, Math.PI / 4, 0]}
-    />
+    <primitive object={model.scene} scale={1.5} position={[0, -1.5, 0]} />
   );
 };
 
-const FaceCanvas = () => {
+const FaceModelCanvas = () => {
   return (
     <Canvas
+      frameloop='demand'
       shadows
-      frameloop="demand"
       dpr={[1, 2]}
+      camera={{ fov: 45, near: 0.1, far: 200, position: [0, 0, 5] }}
       gl={{ preserveDrawingBuffer: true }}
-      camera={{
-        fov: 45,
-        near: 0.1,
-        far: 200,
-        position: [2, 2, 5],
-      }}
+      style={{ height: "400px", width: "100%" }} // ✅ Control size here
     >
       <Suspense fallback={<CanvasLoader />}>
-        {/* 💡 Fix: Add enough light */}
-        <ambientLight intensity={1.2} />
-        <directionalLight position={[5, 5, 5]} intensity={1.5} />
         <OrbitControls autoRotate enableZoom={false} />
-        <Face />
+        <FaceModel />
         <Preload all />
       </Suspense>
     </Canvas>
   );
 };
 
-export default FaceCanvas;
+export default FaceModelCanvas;
