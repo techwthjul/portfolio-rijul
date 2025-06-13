@@ -1,3 +1,4 @@
+
 import React from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
@@ -7,8 +8,6 @@ import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
-// ✅ Import your 3D face model canvas
-import MyModelCanvas from "./canvas/MyModel"; // Make sure this file exists
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className='xs:w-[250px] w-full'>
@@ -46,25 +45,15 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
-      {/* ✅ Flex wrapper to place text + model side-by-side */}
-      <div className="mt-4 flex flex-col-reverse xl:flex-row gap-10 items-center">
-        {/* Left: Intro text */}
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className='text-secondary text-[17px] max-w-3xl leading-[30px]'
-        >
-          Hi, I'm Rijul Ugawekar — a Data Scientist with a strong background in cloud-native analytics, machine learning, and data visualization. With experience across industries and tools like Python, SQL, AWS, Databricks, and Tableau, I enjoy crafting intelligent data solutions that solve real-world problems.
+      <motion.p
+        variants={fadeIn("", "", 0.1, 1)}
+        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+      >
+        Hi, I'm Rijul Ugawekar — a Data Scientist with a strong background in cloud-native analytics, machine learning, and data visualization. With experience across industries and tools like Python, SQL, AWS, Databricks, and Tableau, I enjoy crafting intelligent data solutions that solve real-world problems.
 
-          From building end-to-end ML pipelines for churn prediction and fraud detection to visualizing insights through dashboards and apps, I bridge the gap between raw data and strategic decision-making. I'm passionate about automation, storytelling with data, and continuously learning new tools and technologies to stay ahead in this dynamic field.
-        </motion.p>
+From building end-to-end ML pipelines for churn prediction and fraud detection to visualizing insights through dashboards and apps, I bridge the gap between raw data and strategic decision-making. I'm passionate about automation, storytelling with data, and continuously learning new tools and technologies to stay ahead in this dynamic field.
+      </motion.p>
 
-        {/* Right: 3D Face model */}
-        <div className='xl:flex-[0.5] h-[400px] md:h-[500px] w-full'>
-          <MyModelCanvas />
-        </div>
-      </div>
-
-      {/* Service Cards below */}
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
