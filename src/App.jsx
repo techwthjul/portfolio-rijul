@@ -1,5 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
+// Note: StarsCanvas is no longer imported as it's not used
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works } from "./components";
 
 const App = () => {
   return (
@@ -12,14 +13,14 @@ const App = () => {
         <About />
         <Experience />
         
-        {/* The Tech component is commented out to prevent too many 3D canvases from loading and crashing the page. */}
-        {/* <Tech /> */}
+        {/* Your Tech skill balls are now enabled */}
+        <Tech />
 
         <Works />
         <Feedbacks />
         <div className='relative z-0'>
           <Contact />
-          <StarsCanvas />
+          {/* The StarsCanvas (Earth model) is removed to free up resources */}
         </div>
       </div>
     </BrowserRouter>

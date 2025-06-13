@@ -10,6 +10,7 @@ const FaceModelObject = ({ isMobile }) => {
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
+    // Plays the model's animation
     if (actions["Take 001"]) {
         actions["Take 001"].play();
     }
@@ -19,9 +20,14 @@ const FaceModelObject = ({ isMobile }) => {
     <group ref={group} dispose={null}>
       <primitive
         object={scene}
+        // This value controls the size of the model
         scale={isMobile ? 9 : 12}
-        // Increased the Y position significantly to raise the model higher
+        
+        // ## THIS IS THE VALUE TO ADJUST ##
+        // This controls the model's height. A less negative number (like -1.0) moves it UP.
         position={isMobile ? [0, -1.2, 0] : [0, -1.2, 0]}
+
+        // This controls the side-to-side rotation
         rotation={[0, 0.4, 0]}
       />
     </group>
