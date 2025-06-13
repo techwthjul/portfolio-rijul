@@ -2,7 +2,7 @@ import React, { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF, useAnimations } from "@react-three/drei";
 
-import CanvasLoader from "../Loader"; // Assuming you have this loader component
+import CanvasLoader from "../Loader";
 
 const FaceModelObject = ({ isMobile }) => {
   const group = useRef();
@@ -10,8 +10,6 @@ const FaceModelObject = ({ isMobile }) => {
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
-    // This plays the animation. "Take 001" is a common default animation name.
-    // If it doesn't work, console.log(Object.keys(actions)) to find your animation's name.
     if (actions["Take 001"]) {
         actions["Take 001"].play();
     }
@@ -21,11 +19,9 @@ const FaceModelObject = ({ isMobile }) => {
     <group ref={group} dispose={null}>
       <primitive
         object={scene}
-        // Adjust this number to make the model bigger or smaller
         scale={isMobile ? 9 : 12}
-        // Adjust the second number (Y-axis) to move the model up or down
-        position={isMobile ? [0, -1.8, 0] : [0, -1.8, 0]}
-        // Adjust the second number to rotate the model side-to-side
+        // Increased the Y position significantly to raise the model higher
+        position={isMobile ? [0, -1.2, 0] : [0, -1.2, 0]}
         rotation={[0, 0.4, 0]}
       />
     </group>
