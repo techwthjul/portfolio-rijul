@@ -1,3 +1,4 @@
+
 import React from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
@@ -7,8 +8,6 @@ import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
-// ## IMPORT YOUR NEW 3D MODEL CANVAS ##
-import FaceCanvas from "./canvas/FaceModel";
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className='xs:w-[250px] w-full'>
@@ -46,30 +45,15 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
-      {/* ## START: NEW LAYOUT CONTAINER ## */}
-      {/* This div will wrap your text and the 3D model */}
-      <div className='mt-4 flex flex-col lg:flex-row items-start gap-10'>
-        
-        {/* Your existing paragraph, now inside the flex container */}
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className='text-secondary text-[17px] max-w-3xl leading-[30px] lg:w-[60%]'
-        >
-          Hi, I'm Rijul Ugawekar — a Data Scientist with a strong background in cloud-native analytics, machine learning, and data visualization. With experience across industries and tools like Python, SQL, AWS, Databricks, and Tableau, I enjoy crafting intelligent data solutions that solve real-world problems.
-          <br/><br/>
-          From building end-to-end ML pipelines for churn prediction and fraud detection to visualizing insights through dashboards and apps, I bridge the gap between raw data and strategic decision-making. I'm passionate about automation, storytelling with data, and continuously learning new tools and technologies to stay ahead in this dynamic field.
-        </motion.p>
+      <motion.p
+        variants={fadeIn("", "", 0.1, 1)}
+        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+      >
+        Hi, I'm Rijul Ugawekar — a Data Scientist with a strong background in cloud-native analytics, machine learning, and data visualization. With experience across industries and tools like Python, SQL, AWS, Databricks, and Tableau, I enjoy crafting intelligent data solutions that solve real-world problems.
 
-        {/* The new 3D model canvas, also inside the flex container */}
-        <div className='w-full lg:w-[40%] h-[350px] md:h-[450px]'>
-          <FaceCanvas />
-        </div>
+From building end-to-end ML pipelines for churn prediction and fraud detection to visualizing insights through dashboards and apps, I bridge the gap between raw data and strategic decision-making. I'm passionate about automation, storytelling with data, and continuously learning new tools and technologies to stay ahead in this dynamic field.
+      </motion.p>
 
-      </div>
-      {/* ## END: NEW LAYOUT CONTAINER ## */}
-
-
-      {/* This is your existing "services" section, which is untouched */}
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
