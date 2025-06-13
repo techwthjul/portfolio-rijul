@@ -30,6 +30,13 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+// Your project images with original filenames
+import flightFare from "./1644942089206.png";
+import eltPipeline from "./elt.png";
+import cyberPulse from "./cyber.jpeg";
+import sqlProject from "./sql.png";
+import electricity from "./south caro.webp";
+
 export {
   logo,
   backend,
@@ -59,4 +66,9 @@ export {
   carrent,
   jobit,
   tripguide,
+  flightFare,
+  eltPipeline,
+  cyberPulse,
+  sqlProject,
+  electricity,
 };

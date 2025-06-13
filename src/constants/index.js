@@ -23,6 +23,11 @@ import {
   jobit,
   tripguide,
   threejs,
+  flightFare,
+  eltPipeline,
+  cyberPulse,
+  sqlProject,
+  electricity,
 } from "../assets";
 
 export const navLinks = [
@@ -42,19 +47,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Data Engineer",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "MLOps and Cloud Native Enthusiast",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Data Scientist",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Travel+Tech Content Creator",
     icon: creator,
   },
 ];
@@ -116,149 +121,118 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
+    title: "Data Engineer Intern",
+    company_name: "iConsult Collaborative",
     icon: starbucks,
     iconBg: "#383E56",
     date: "March 2020 - April 2021",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Leveraged user engagement data and predictive modeling to segment customers and implement targeted retention strategies.",
+      "Conducted A/B testing on segmented customer cohorts to optimize retention strategies, resulting in a 15% reduction in churn rate.",
+      "Built an ETL data pipeline for a subscription-based service provider using Airflow and AWS, reducing manual work by 40%.",
+      "Used NLP techniques for text classification and sentiment analysis of customer feedback, which was integrated into a Tableau dashboard with alerts for high-priority tickets, cutting response time by 30%.",
+      "Collaborated with cross-functional teams to recommend KPI-driven reports and streamline data science models within Agile framework"
     ],
   },
   {
-    title: "React Native Developer",
+    title: "Teaching Assistant",
     company_name: "Tesla",
     icon: tesla,
     iconBg: "#E6DEDD",
     date: "Jan 2021 - Feb 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Collaborated with UK startups to guide sentiment analysis using R (tidytext, afinn) and A/B testing via Brevo.",
+      "Optimized email campaigns by analyzing emotional tone, subject lines, CTAs, and send-time performance.",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
+    title: "Cloud Infrastructure Engineer",
+    company_name: "LTIMindtree",
     icon: shopify,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "July 2022 - June 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Built and maintained scalable cloud infrastructure on Microsoft Azure, provisioning resources for secure data storage, compute, and networking across hybrid environments.",
+      "Developed ETL pipelines using Azure Databricks to support real-time and batch processing for enterprise data warehousing.",
+      "Implemented messaging workflows with Apache Kafka to enable seamless microservices data streaming in EMS.",
+      "Orchestrated complex workflows using Airflow DAGs and modularized transformations with dbt.",
     ],
   },
 ];
 
 const testimonials = [
   {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    videoUrl: "https://www.youtube.com/watch?v=0OOGlrK5_HM",
+    thumbnail: "https://img.youtube.com/vi/0OOGlrK5_HM/0.jpg",
+    title: "ELT Pipeline using Airflow, DBT, Snowflake and Cosmos",
   },
   {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    videoUrl: "https://www.youtube.com/watch?v=BHulUrbyDXo",
+    thumbnail: "https://img.youtube.com/vi/BHulUrbyDXo/0.jpg",
+    title: "A Day in Life of a Master's Student",
   },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Airflow + DBT + Snowflake ELT Pipeline",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Cloud-based ELT pipeline orchestrated using Airflow and DBT for automated transformation and testing on Snowflake with Cosmos-triggered CI/CD runs.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
+      { name: "Airflow", color: "blue-text-gradient" },
+      { name: "DBT", color: "green-text-gradient" },
+      { name: "Snowflake", color: "pink-text-gradient" },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: eltPipeline,
+    source_code_link: "https://github.com/techwthjul/airflow-dbt-snowflake-pipeline",
   },
   {
-    name: "Job IT",
+    name: "CyberPulse: Predictive Threat Detection",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "ML-powered cybersecurity threat detection tool analyzing 40K+ logs using XGBoost for real-time anomaly detection (AUC 0.92).",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
+      { name: "XGBoost", color: "orange-text-gradient" },
+      { name: "Cybersecurity", color: "green-text-gradient" },
+      { name: "Anomaly Detection", color: "pink-text-gradient" },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: cyberPulse,
+    source_code_link: "https://github.com/techwthjul/ML-CyberPulse-ThreatDetection",
   },
   {
-    name: "Trip Guide",
+    name: "Dynamic Flight Fare Prediction",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Predicts and classifies flight ticket prices using tree-based models like XGBoost and Random Forest (R²: 0.9551, AUC: 0.9882).",
     tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
+      { name: "Machine Learning", color: "blue-text-gradient" },
+      { name: "Pricing", color: "green-text-gradient" },
+      { name: "XGBoost", color: "pink-text-gradient" },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: flightFare,
+    source_code_link: "https://github.com/techwthjul/Dynamic_Pricing_ML-Project",
+  },
+  {
+    name: "Electricity Consumption Forecast App",
+    description:
+      "Interactive R Shiny app for forecasting electricity use based on environmental and property features, with real-time visual insights.",
+    tags: [
+      { name: "R Shiny", color: "blue-text-gradient" },
+      { name: "Energy Forecasting", color: "green-text-gradient" },
+      { name: "Visualization", color: "pink-text-gradient" },
+    ],
+    image: electricity,
+    source_code_link: "https://github.com/techwthjul/Electricity-Consumption-Prediction-App-Using-Shiny-and-R-Programming-",
+  },
+  {
+    name: "SQL App for Student Job Allocation",
+    description:
+      "SQL-based automation app using views, stored procedures, and PowerApps UI to assign jobs to unplaced students efficiently.",
+    tags: [
+      { name: "SQL", color: "blue-text-gradient" },
+      { name: "PowerApps", color: "green-text-gradient" },
+      { name: "Automation", color: "pink-text-gradient" },
+    ],
+    image: sqlProject,
+    source_code_link: "https://github.com/techwthjul/Student_Employment_App_SQL",
   },
 ];
 
