@@ -5,10 +5,6 @@ import {
   web,
   docker,
   git,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
   threejs,
   flightFare,
   eltPipeline,
@@ -27,6 +23,10 @@ import {
   spark,
   sql,
   tableau,
+  // Company imports
+  iconsult,
+  syracuse,
+  ltimindtree,
 } from "../assets";
 
 export const navLinks = [
@@ -122,31 +122,39 @@ const experiences = [
   {
     title: "Data Engineer Intern",
     company_name: "iConsult Collaborative",
-    icon: iconsult, // Changed from starbucks
+    icon: syracuse, // Using Syracuse logo for iConsult as requested
     iconBg: "#383E56",
     date: "November 2024 - Present",
     points: [
-      // ... your points ...
+      "Leveraged user engagement data and predictive modeling to segment customers and implement targeted retention strategies.",
+      "Conducted A/B testing on segmented customer cohorts to optimize retention strategies, resulting in a 15% reduction in churn rate.",
+      "Built an ETL data pipeline for a subscription-based service provider using Airflow and AWS, reducing manual work by 40%.",
+      "Used NLP techniques for text classification and sentiment analysis of customer feedback, which was integrated into a Tableau dashboard with alerts for high-priority tickets, cutting response time by 30%.",
+      "Collaborated with cross-functional teams to recommend KPI-driven reports and streamline data science models within Agile framework"
     ],
   },
   {
     title: "Teaching Assistant",
     company_name: "Syracuse University",
-    icon: syracuse, // Changed from tesla
+    icon: syracuse, // Syracuse logo for Teaching Assistant
     iconBg: "#E6DEDD",
     date: "January 2024 - May 2024",
     points: [
-      // ... your points ...
+      "Collaborated with UK startups to guide sentiment analysis using R (tidytext, afinn) and A/B testing via Brevo.",
+      "Optimized email campaigns by analyzing emotional tone, subject lines, CTAs, and send-time performance.",
     ],
   },
   {
     title: "Cloud Infrastructure Engineer",
     company_name: "LTIMindtree",
-    icon: ltimindtree, // Changed from shopify
+    icon: ltimindtree, // LTIMindtree logo as requested
     iconBg: "#383E56",
     date: "July 2022 - June 2023",
     points: [
-      // ... your points ...
+      "Built and maintained scalable cloud infrastructure on Microsoft Azure, provisioning resources for secure data storage, compute, and networking across hybrid environments.",
+      "Developed ETL pipelines using Azure Databricks to support real-time and batch processing for enterprise data warehousing.",
+      "Implemented messaging workflows with Apache Kafka to enable seamless microservices data streaming in EMS.",
+      "Orchestrated complex workflows using Airflow DAGs and modularized transformations with dbt.",
     ],
   },
 ];

@@ -25,9 +25,9 @@ import tableau from "./tech/Tableau_Symbol.png";
 // Keep threejs for 3D functionality
 import threejs from "./tech/threejs.svg";
 
-// Company logos - UPDATED
-import iconsult from "./company/starbucks.png"; // Using starbucks as placeholder for iConsult
-import syracuse from "./company/Syracuse_Orange_logo.svg";
+// Company logos - UPDATED WITH CORRECT EXTENSION
+import iconsult from "./company/starbucks.png";
+import syracuse from "./company/Syracuse_Orange_logo.svg"; // Fixed: added .svg extension
 import ltimindtree from "./company/lti.png";
 
 // Legacy project images (if you still need them)
