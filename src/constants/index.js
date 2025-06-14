@@ -286,7 +286,7 @@ const certifications = [
     date: "2024",
     credential: "Your-Credential-ID",
     image: aws,
-    verify_link: "https://www.credly.com/badges/your-aws-badge", // Add your actual verification link
+    verify_link: "https://cp.certmetrics.com/amazon/en/public/verify/credential/92H9V7KDN14EQH3D", // Add your actual verification link
   },
   {
     name: "Microsoft Azure Fundamentals (AZ-900)",
@@ -294,7 +294,7 @@ const certifications = [
     date: "2024",
     credential: "Your-Credential-ID",
     image: azure,
-    verify_link: "https://www.credly.com/badges/your-azure-fundamentals", // Add your actual link
+    verify_link: "https://www.credly.com/badges/5f532ece-9b52-4387-8c6d-62c70b3b29d1/linked_in_profile", // Add your actual link
   },
   {
     name: "Microsoft Azure Administrator Associate",
@@ -302,7 +302,7 @@ const certifications = [
     date: "2024",
     credential: "Your-Credential-ID",
     image: azure,
-    verify_link: "https://www.credly.com/badges/your-azure-admin", // Add your actual link
+    verify_link: "https://www.credly.com/badges/dcc7f7fe-c808-4cc0-97dd-3bafd09c9c2f/linked_in_profile", // Add your actual link
   },
   {
     name: "Tableau Desktop Specialist",
@@ -310,7 +310,7 @@ const certifications = [
     date: "2024",
     credential: "Your-Credential-ID",
     image: tableau,
-    verify_link: "https://www.credly.com/badges/your-tableau-cert", // Add your actual link
+    verify_link: "https://www.credly.com/badges/d855bcd0-eb4d-4fbd-a05b-572632b2d5c5/linked_in_profile", // Add your actual link
   },
   {
     name: "Databricks Data Engineer Associate",
