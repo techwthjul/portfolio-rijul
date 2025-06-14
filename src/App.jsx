@@ -1,12 +1,9 @@
 import { BrowserRouter } from "react-router-dom";
-import { lazy, Suspense } from "react";
 
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
-
-// Lazy load these components
-const Education = lazy(() => import("./components/Education"));
-const Certifications = lazy(() => import("./components/Certifications"));
-const Blogs = lazy(() => import("./components/Blogs"));
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works } from "./components";
+import Education from "./components/Education";
+import Certifications from "./components/Certifications";
+import Blogs from "./components/Blogs";
 
 const App = () => {
   return (
@@ -17,20 +14,16 @@ const App = () => {
           <Hero />
         </div>
         <About />
-        <Suspense fallback={<div className="h-screen flex items-center justify-center">Loading...</div>}>
-          <Education />
-        </Suspense>
+        <Education />
         <Experience />
         <Tech />
         <Works />
-        <Suspense fallback={<div className="h-screen flex items-center justify-center">Loading...</div>}>
-          <Certifications />
-          <Blogs />
-        </Suspense>
+        <Certifications />
+        <Blogs />
         <Feedbacks />
         <div className='relative z-0'>
           <Contact />
-          <StarsCanvas />
+          {/* Removed StarsCanvas here */}
         </div>
       </div>
     </BrowserRouter>

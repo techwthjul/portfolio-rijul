@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
+
 import { styles } from "../styles";
+import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
-        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
         <div className='flex flex-col justify-center items-center mt-5'>
           <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
@@ -14,30 +16,16 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className='text-[#915EFF]'>Rijul</span>
+            Hi, I'm <span className='text-[#915EFF]'>Rijul Ugawekar</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop scalable data solutions, <br className='sm:block hidden' />
-            ML models, and cloud infrastructure
+            I build data-driven products, <br className='sm:block hidden' />
+            ML pipelines and intelligent dashboards
           </p>
         </div>
       </div>
 
-      {/* Replace 3D computer with animated gradient background */}
-      <div className='absolute inset-0 top-[250px] max-w-7xl mx-auto flex items-center justify-center'>
-        <motion.div
-          animate={{
-            scale: [1, 1.1, 1],
-            rotate: [0, 5, -5, 0],
-          }}
-          transition={{
-            duration: 5,
-            repeat: Infinity,
-            repeatType: "loop",
-          }}
-          className='w-[300px] h-[300px] md:w-[500px] md:h-[500px] rounded-full bg-gradient-to-r from-purple-600 via-violet-600 to-pink-600 opacity-20 blur-3xl'
-        />
-      </div>
+      <ComputersCanvas />
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>
