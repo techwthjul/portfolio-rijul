@@ -1,14 +1,11 @@
 import React from "react";
-import Tilt from "react-parallax-tilt";
+import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
-
-// Import your FaceCanvas component
-import FaceCanvas from "./canvas/FaceModel";
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className='xs:w-[250px] w-full'>
@@ -29,6 +26,7 @@ const ServiceCard = ({ index, title, icon }) => (
           alt='web-development'
           className='w-16 h-16 object-contain'
         />
+
         <h3 className='text-white text-[20px] font-bold text-center'>
           {title}
         </h3>
@@ -45,26 +43,17 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
-      {/* This new container creates the side-by-side layout */}
-      <div className='mt-4 flex flex-col lg:flex-row items-center gap-10'>
-        
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className='text-secondary text-[17px] max-w-3xl leading-[30px] lg:w-[60%]'
-        >
-          Hi, I'm Rijul Ugawekar — a Data Scientist with a strong background in cloud-native analytics, machine learning, and data visualization. With experience across industries and tools like Python, SQL, AWS, Databricks, and Tableau, I enjoy crafting intelligent data solutions that solve real-world problems.
-          <br/><br/>
-          From building end-to-end ML pipelines for churn prediction and fraud detection to visualizing insights through dashboards and apps, I bridge the gap between raw data and strategic decision-making. I'm passionate about automation, storytelling with data, and continuously learning new tools and technologies to stay ahead in this dynamic field.
-        </motion.p>
+      <motion.p
+        variants={fadeIn("", "", 0.1, 1)}
+        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+      >
+        I'm a skilled software developer with experience in TypeScript and
+        JavaScript, and expertise in frameworks like React, Node.js, and
+        Three.js. I'm a quick learner and collaborate closely with clients to
+        create efficient, scalable, and user-friendly solutions that solve
+        real-world problems. Let's work together to bring your ideas to life!
+      </motion.p>
 
-        {/* This container renders your 3D model and MUST have a height class */}
-        <div className='w-full lg:w-[40%] h-[350px] md:h-[450px]'>
-          <FaceCanvas />
-        </div>
-
-      </div>
-
-      {/* Your service cards section remains untouched */}
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />

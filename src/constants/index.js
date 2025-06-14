@@ -3,30 +3,26 @@ import {
   backend,
   creator,
   web,
-  docker,
-  git,
-  threejs,
-  flightFare,
-  eltPipeline,
-  cyberPulse,
-  sqlProject,
-  electricity,
-  // Data science tech imports
-  aws,
-  azure,
-  databricks,
+  javascript,
+  typescript,
+  html,
+  css,
+  reactjs,
+  redux,
+  tailwind,
+  nodejs,
   mongodb,
-  pandas,
-  powerbi,
-  python,
-  snowflake,
-  spark,
-  sql,
-  tableau,
-  // Company imports
-  iconsult,
-  syracuse,
-  ltimindtree,
+  git,
+  figma,
+  docker,
+  meta,
+  starbucks,
+  tesla,
+  shopify,
+  carrent,
+  jobit,
+  tripguide,
+  threejs,
 } from "../assets";
 
 export const navLinks = [
@@ -35,20 +31,8 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "education",
-    title: "Education",
-  },
-  {
     id: "work",
-    title: "Experience",
-  },
-  {
-    id: "projects",
-    title: "Projects",
-  },
-  {
-    id: "blogs",
-    title: "Blogs",
+    title: "Work",
   },
   {
     id: "contact",
@@ -58,335 +42,224 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Data Engineer",
+    title: "Web Developer",
     icon: web,
   },
   {
-    title: "MLOps and Cloud Native Enthusiast",
+    title: "React Native Developer",
     icon: mobile,
   },
   {
-    title: "Data Scientist",
+    title: "Backend Developer",
     icon: backend,
   },
   {
-    title: "Travel+Tech Content Creator",
+    title: "Content Creator",
     icon: creator,
   },
 ];
 
 const technologies = [
   {
-    name: "Python",
-    icon: python,
+    name: "HTML 5",
+    icon: html,
   },
   {
-    name: "SQL",
-    icon: sql,
+    name: "CSS 3",
+    icon: css,
   },
   {
-    name: "AWS",
-    icon: aws,
+    name: "JavaScript",
+    icon: javascript,
   },
   {
-    name: "Azure",
-    icon: azure,
+    name: "TypeScript",
+    icon: typescript,
   },
   {
-    name: "Databricks",
-    icon: databricks,
+    name: "React JS",
+    icon: reactjs,
   },
   {
-    name: "Snowflake",
-    icon: snowflake,
+    name: "Redux Toolkit",
+    icon: redux,
   },
   {
-    name: "Tableau",
-    icon: tableau,
+    name: "Tailwind CSS",
+    icon: tailwind,
   },
   {
-    name: "Power BI",
-    icon: powerbi,
-  },
-  {
-    name: "Pandas",
-    icon: pandas,
-  },
-  {
-    name: "Spark",
-    icon: spark,
-  },
-  {
-    name: "Docker",
-    icon: docker,
+    name: "Node JS",
+    icon: nodejs,
   },
   {
     name: "MongoDB",
     icon: mongodb,
   },
   {
-    name: "Git",
+    name: "Three JS",
+    icon: threejs,
+  },
+  {
+    name: "git",
     icon: git,
   },
-];
-
-const education = [
   {
-    degree: "Master of Science in Information Systems",
-    school_name: "Syracuse University, NY, USA",
-    icon: syracuse,
-    iconBg: "#E6DEDD",
-    date: "Expected Graduation - August 2025",
-    gpa: "3.78/4.0",
-    courses: [
-      "Introduction to Data Science (R Programming)",
-      "Database Management System (SQL, NoSQL)",
-      "Cloud Management (AWS, Azure)",
-      "Applied Machine Learning (Python, PySpark)",
-      "Business Analysis (Excel, Tableau, PowerBI)",
-    ],
+    name: "figma",
+    icon: figma,
   },
   {
-    degree: "Bachelor of Engineering in Electronics Engineering",
-    school_name: "University of Mumbai, Mumbai, India",
-    icon: iconsult, // You can add a Mumbai University logo later
-    iconBg: "#383E56",
-    date: "Graduated - August 2022",
-    gpa: "3.4/4.0",
-    courses: [
-      "Data Structures & Algorithms",
-      "Database Management System",
-      "Object Oriented Programming",
-      "Electrical Networking Systems",
-    ],
+    name: "docker",
+    icon: docker,
   },
 ];
 
 const experiences = [
   {
-    title: "Data Engineer Intern",
-    company_name: "iConsult Collaborative",
-    icon: syracuse,
+    title: "React.js Developer",
+    company_name: "Starbucks",
+    icon: starbucks,
     iconBg: "#383E56",
-    date: "November 2024 - Present",
+    date: "March 2020 - April 2021",
     points: [
-      "Leveraged user engagement data and predictive modeling to segment customers and implement targeted retention strategies.",
-      "Conducted A/B testing on segmented customer cohorts to optimize retention strategies, resulting in a 15% reduction in churn rate.",
-      "Built an ETL data pipeline for a subscription-based service provider using Airflow and AWS, reducing manual work by 40%.",
-      "Used NLP techniques for text classification and sentiment analysis of customer feedback, which was integrated into a Tableau dashboard with alerts for high-priority tickets, cutting response time by 30%.",
-      "Collaborated with cross-functional teams to recommend KPI-driven reports and streamline data science models within Agile framework"
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
   {
-    title: "Teaching Assistant",
-    company_name: "Syracuse University",
-    icon: syracuse,
+    title: "React Native Developer",
+    company_name: "Tesla",
+    icon: tesla,
     iconBg: "#E6DEDD",
-    date: "January 2024 - May 2024",
+    date: "Jan 2021 - Feb 2022",
     points: [
-      "Collaborated with UK startups to guide sentiment analysis using R (tidytext, afinn) and A/B testing via Brevo.",
-      "Optimized email campaigns by analyzing emotional tone, subject lines, CTAs, and send-time performance.",
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
   {
-    title: "Cloud Infrastructure Engineer",
-    company_name: "LTIMindtree",
-    icon: ltimindtree,
+    title: "Web Developer",
+    company_name: "Shopify",
+    icon: shopify,
     iconBg: "#383E56",
-    date: "July 2022 - June 2023",
+    date: "Jan 2022 - Jan 2023",
     points: [
-      "Built and maintained scalable cloud infrastructure on Microsoft Azure, provisioning resources for secure data storage, compute, and networking across hybrid environments.",
-      "Developed ETL pipelines using Azure Databricks to support real-time and batch processing for enterprise data warehousing.",
-      "Implemented messaging workflows with Apache Kafka to enable seamless microservices data streaming in EMS.",
-      "Orchestrated complex workflows using Airflow DAGs and modularized transformations with dbt.",
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
+    ],
+  },
+  {
+    title: "Full stack Developer",
+    company_name: "Meta",
+    icon: meta,
+    iconBg: "#E6DEDD",
+    date: "Jan 2023 - Present",
+    points: [
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
 ];
 
 const testimonials = [
   {
-    videoUrl: "https://www.youtube.com/watch?v=0OOGlrK5_HM",
-    thumbnail: "https://img.youtube.com/vi/0OOGlrK5_HM/0.jpg",
-    title: "ELT Pipeline using Airflow, DBT, Snowflake and Cosmos",
+    testimonial:
+      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+    name: "Sara Lee",
+    designation: "CFO",
+    company: "Acme Co",
+    image: "https://randomuser.me/api/portraits/women/4.jpg",
   },
   {
-    videoUrl: "https://www.youtube.com/watch?v=BHulUrbyDXo",
-    thumbnail: "https://img.youtube.com/vi/BHulUrbyDXo/0.jpg",
-    title: "A Day in Life of a Master's Student",
+    testimonial:
+      "I've never met a web developer who truly cares about their clients' success like Rick does.",
+    name: "Chris Brown",
+    designation: "COO",
+    company: "DEF Corp",
+    image: "https://randomuser.me/api/portraits/men/5.jpg",
+  },
+  {
+    testimonial:
+      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+    name: "Lisa Wang",
+    designation: "CTO",
+    company: "456 Enterprises",
+    image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
 
 const projects = [
   {
-    name: "Airflow + DBT + Snowflake ELT Pipeline",
+    name: "Car Rent",
     description:
-      "Cloud-based ELT pipeline orchestrated using Airflow and DBT for automated transformation and testing on Snowflake with Cosmos-triggered CI/CD runs.",
-    tags: [
-      { name: "Airflow", color: "blue-text-gradient" },
-      { name: "DBT", color: "green-text-gradient" },
-      { name: "Snowflake", color: "pink-text-gradient" },
-    ],
-    image: eltPipeline,
-    source_code_link: "https://github.com/techwthjul/airflow-dbt-snowflake-pipeline",
-  },
-  {
-    name: "CyberPulse: Predictive Threat Detection",
-    description:
-      "ML-powered cybersecurity threat detection tool analyzing 40K+ logs using XGBoost for real-time anomaly detection (AUC 0.92).",
-    tags: [
-      { name: "XGBoost", color: "orange-text-gradient" },
-      { name: "Cybersecurity", color: "green-text-gradient" },
-      { name: "Anomaly Detection", color: "pink-text-gradient" },
-    ],
-    image: cyberPulse,
-    source_code_link: "https://github.com/techwthjul/ML-CyberPulse-ThreatDetection",
-  },
-  {
-    name: "Dynamic Flight Fare Prediction",
-    description:
-      "Predicts and classifies flight ticket prices using tree-based models like XGBoost and Random Forest (R²: 0.9551, AUC: 0.9882).",
-    tags: [
-      { name: "Machine Learning", color: "blue-text-gradient" },
-      { name: "Pricing", color: "green-text-gradient" },
-      { name: "XGBoost", color: "pink-text-gradient" },
-    ],
-    image: flightFare,
-    source_code_link: "https://github.com/techwthjul/Dynamic_Pricing_ML-Project",
-  },
-  {
-    name: "Electricity Consumption Forecast App",
-    description:
-      "Interactive R Shiny app for forecasting electricity use based on environmental and property features, with real-time visual insights.",
-    tags: [
-      { name: "R Shiny", color: "blue-text-gradient" },
-      { name: "Energy Forecasting", color: "green-text-gradient" },
-      { name: "Visualization", color: "pink-text-gradient" },
-    ],
-    image: electricity,
-    source_code_link: "https://github.com/techwthjul/Electricity-Consumption-Prediction-App-Using-Shiny-and-R-Programming-",
-  },
-  {
-    name: "SQL App for Student Job Allocation",
-    description:
-      "SQL-based automation app using views, stored procedures, and PowerApps UI to assign jobs to unplaced students efficiently.",
-    tags: [
-      { name: "SQL", color: "blue-text-gradient" },
-      { name: "PowerApps", color: "green-text-gradient" },
-      { name: "Automation", color: "pink-text-gradient" },
-    ],
-    image: sqlProject,
-    source_code_link: "https://github.com/techwthjul/Student_Employment_App_SQL",
-  },
-];
-
-const certifications = [
-  {
-    name: "Tableau Desktop Specialist",
-    organization: "Tableau",
-    date: "Issued: Feb 2025",
-    image: tableau,
-    verify_link: "#", // Replace with your actual Credly link when available
-  },
-  {
-    name: "Microsoft Certified: Azure Administrator Associate",
-    organization: "Microsoft",
-    date: "Issued: Oct 2022 | Expired: Oct 2023",
-    image: azure,
-    verify_link: "#", // Replace with your actual Credly link
-  },
-  {
-    name: "Microsoft Certified: Azure Fundamentals",
-    organization: "Microsoft",
-    date: "Issued: Sep 2022",
-    image: azure,
-    verify_link: "#", // Replace with your actual Credly link
-  },
-  {
-    name: "AWS Certified Cloud Practitioner",
-    organization: "Amazon Web Services",
-    date: "Issued: May 2022 | Expires: May 2025",
-    image: aws,
-    verify_link: "#", // Replace with your actual Credly link
-  },
-  {
-    name: "Databricks Data Engineer Associate",
-    organization: "Databricks",
-    date: "Pursuing",
-    image: databricks,
-    verify_link: "#",
-  },
-];
-
-const blogs = [
-  {
-    title: "Building Scalable ETL Pipelines with Apache Airflow and DBT",
-    description:
-      "A comprehensive guide on implementing production-ready data pipelines using modern data stack tools. Learn how to orchestrate complex workflows and ensure data quality.",
+      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
     tags: [
       {
-        name: "DataEngineering",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "Airflow",
+        name: "mongodb",
         color: "green-text-gradient",
       },
       {
-        name: "DBT",
+        name: "tailwind",
         color: "pink-text-gradient",
       },
     ],
-    image: eltPipeline,
-    blog_link: "https://medium.com/@rijulu17ugawekar", // Update when you publish this article
-    date: "Jan 2024",
-    read_time: "8 min read",
+    image: carrent,
+    source_code_link: "https://github.com/",
   },
   {
-    title: "Real-time Threat Detection using Machine Learning",
+    name: "Job IT",
     description:
-      "Exploring how XGBoost and feature engineering can be used to build an effective cybersecurity threat detection system with high accuracy.",
+      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
     tags: [
       {
-        name: "MachineLearning",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "Cybersecurity",
+        name: "restapi",
         color: "green-text-gradient",
       },
       {
-        name: "Python",
+        name: "scss",
         color: "pink-text-gradient",
       },
     ],
-    image: cyberPulse,
-    blog_link: "https://medium.com/@rijulu17ugawekar", // Update when you publish this article
-    date: "Dec 2023",
-    read_time: "6 min read",
+    image: jobit,
+    source_code_link: "https://github.com/",
   },
   {
-    title: "Dynamic Pricing Strategies in Aviation using ML",
+    name: "Trip Guide",
     description:
-      "An in-depth analysis of how machine learning models can optimize airline pricing strategies based on demand patterns and seasonality.",
+      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
     tags: [
       {
-        name: "ML",
+        name: "nextjs",
         color: "blue-text-gradient",
       },
       {
-        name: "Pricing",
+        name: "supabase",
         color: "green-text-gradient",
       },
       {
-        name: "Aviation",
+        name: "css",
         color: "pink-text-gradient",
       },
     ],
-    image: flightFare,
-    blog_link: "https://medium.com/@rijulu17ugawekar", // Update when you publish this article
-    date: "Nov 2023",
-    read_time: "10 min read",
+    image: tripguide,
+    source_code_link: "https://github.com/",
   },
 ];
 
-export { services, technologies, education, experiences, testimonials, projects, certifications, blogs };
+export { services, technologies, experiences, testimonials, projects };
