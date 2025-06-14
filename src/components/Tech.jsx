@@ -8,43 +8,22 @@ import Ball from "./canvas/Ball";
 import CanvasLoader from "./Loader";
 
 const Tech = () => {
-  const isMobile = window.innerWidth <= 768;
-  const ballsPerRow = isMobile ? 3 : 5;
-  const rowOffset = isMobile ? 4 : 3;
-
   return (
-    <div
-      className='flex flex-row flex-wrap justify-center gap-10'
-      style={{ height: `${Math.ceil(technologies.length / ballsPerRow) * rowOffset * 40}px` }}
-    >
-      <Canvas frameloop='demand' dpr={[1, 2]} gl={{ preserveDrawingBuffer: true }}>
-        <Suspense fallback={<CanvasLoader />}>
-          <OrbitControls enableZoom={false} />
-
-          {/* We are mapping over the technologies and rendering a Ball for each */}
-          {technologies.map((technology, index) => {
-            const row = Math.floor(index / ballsPerRow);
-            const col = index % ballsPerRow;
-
-            return (
-              <group
-                key={technology.name}
-                position={[
-                  col * 3 - (ballsPerRow - 1) * 1.5,
-                  row * -rowOffset,
-                  0
-                ]}
-              >
-                {/* The Ball component itself has some lights, but we add a main scene light here */}
-                <ambientLight intensity={1} />
-                <directionalLight position={[1, 1, 1]} />
-                <Ball imgUrl={technology.icon} />
-              </group>
-            );
-          })}
-        </Suspense>
-        <Preload all />
-      </Canvas>
+    <div className='flex flex-row flex-wrap justify-center gap-10'>
+      {technologies.map((technology) => (
+        // Each technology gets its own small canvas wrapper.
+        // This isolates them and prevents the "Too Many Contexts" error
+        // because we are only rendering a few at a time.
+        <div className='w-28 h-28' key={technology.name}>
+          <Canvas frameloop='demand' dpr={[1, 2]} gl={{ preserveDrawingBuffer: true }}>
+            <Suspense fallback={<CanvasLoader />}>
+              <OrbitControls enableZoom={false} />
+              <Ball imgUrl={technology.icon} />
+            </Suspense>
+            <Preload all />
+          </Canvas>
+        </div>
+      ))}
     </div>
   );
 };
