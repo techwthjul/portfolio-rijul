@@ -40,9 +40,11 @@ const EducationCard = ({ education }) => {
         >
           {education.school_name}
         </p>
-        <p className='text-secondary text-[14px] mt-2'>
-          GPA: {education.gpa}
-        </p>
+        {education.gpa && (
+          <p className='text-secondary text-[14px]' style={{ margin: "5px 0" }}>
+            GPA: {education.gpa}
+          </p>
+        )}
       </div>
 
       <ul className='mt-5 list-disc ml-5 space-y-2'>
@@ -63,20 +65,16 @@ const Education = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-center`}>
-          My academic journey
-        </p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>
-          Education.
-        </h2>
+        <p className={styles.sectionSubText}>My Academic Journey</p>
+        <h2 className={styles.sectionHeadText}>Education.</h2>
       </motion.div>
 
       <div className='mt-20 flex flex-col'>
         <VerticalTimeline>
-          {education.map((edu, index) => (
+          {education.map((education, index) => (
             <EducationCard
               key={`education-${index}`}
-              education={edu}
+              education={education}
             />
           ))}
         </VerticalTimeline>

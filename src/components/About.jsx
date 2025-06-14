@@ -1,29 +1,23 @@
 import React from "react";
-import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
+// Import FaceCanvas from canvas folder
+import FaceCanvas from "./canvas/FaceModel";
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='xs:w-[250px] w-full'>
+  <div className='xs:w-[250px] w-full'>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
     >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
-      >
+      <div className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col hover:scale-105 transition-transform duration-300 cursor-pointer'>
         <img
           src={icon}
-          alt='web-development'
+          alt='service-icon'
           className='w-16 h-16 object-contain'
         />
 
@@ -32,7 +26,7 @@ const ServiceCard = ({ index, title, icon }) => (
         </h3>
       </div>
     </motion.div>
-  </Tilt>
+  </div>
 );
 
 const About = () => {
@@ -43,16 +37,33 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
-      >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
-      </motion.p>
+      <div className='flex flex-col lg:flex-row items-center lg:items-start gap-10 mt-10'>
+        <motion.p
+          variants={fadeIn("", "", 0.1, 1)}
+          className='text-secondary text-[17px] max-w-3xl leading-[30px] lg:flex-1'
+        >
+          Hi, I'm Rijul Ugawekar — a Data Scientist with a strong background in cloud-
+          native analytics, machine learning, and data visualization. With experience 
+          across industries and tools like Python, SQL, AWS, Databricks, and Tableau, I 
+          enjoy crafting intelligent data solutions that solve real-world problems.
+          <br /><br />
+          From building end-to-end ML pipelines for churn prediction and fraud 
+          detection to visualizing insights through dashboards and apps, I bridge the 
+          gap between raw data and strategic decision-making. I'm passionate about 
+          automation, storytelling with data, and continuously learning new tools and 
+          technologies to stay ahead in this dynamic field.
+        </motion.p>
+
+        <motion.div
+          variants={fadeIn("left", "spring", 0.5, 0.75)}
+          className='lg:flex-shrink-0'
+        >
+          <div className='w-[300px] h-[400px] lg:w-[350px] lg:h-[450px]'>
+            {/* Your 3D Face Model - passport style portrait */}
+            <FaceCanvas />
+          </div>
+        </motion.div>
+      </div>
 
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (

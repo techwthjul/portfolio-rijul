@@ -7,6 +7,7 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
+// Tech stack icons from tech folder
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
@@ -21,14 +22,34 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+// Data science tech icons
+import aws from "./tech/aws.png";
+import azure from "./tech/azure.png";
+import databricks from "./tech/databricks.webp";
+import pandas from "./tech/pandas.svg";
+import powerbi from "./tech/power bi.png";
+import python from "./tech/python.png";
+import snowflake from "./tech/snowflake.png";
+import spark from "./tech/spark.webp";
+import sql from "./tech/sql.webp";
+import tableau from "./tech/Tableau_Symbol.png";
 
+// Company logos
+import iconsult from "./company/starbucks.png";
+import syracuse from "./Syracuse_Orange_logo.svg.png"; // FIXED: Corrected path and removed extra .svg
+import ltimindtree from "./company/lti.png";
+
+// Legacy project images for compatibility
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+
+// Your actual project images
+import flightFare from "./flightfare.png";
+import eltPipeline from "./elt.png";
+import cyberPulse from "./cyber.jpeg";
+import sqlProject from "./sql.png";
+import electricity from "./south caro.webp";
 
 export {
   logo,
@@ -52,11 +73,29 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
+  // Data science tech
+  aws,
+  azure,
+  databricks,
+  pandas,
+  powerbi,
+  python,
+  snowflake,
+  spark,
+  sql,
+  tableau,
+  // Company logos
+  iconsult,
+  syracuse,
+  ltimindtree,
+  // Legacy projects
   carrent,
   jobit,
   tripguide,
+  // Your projects
+  flightFare,
+  eltPipeline,
+  cyberPulse,
+  sqlProject,
+  electricity,
 };
