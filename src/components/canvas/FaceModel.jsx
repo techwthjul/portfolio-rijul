@@ -20,10 +20,9 @@ const FaceModelObject = ({ isMobile }) => {
       <primitive
         object={scene}
         scale={isMobile ? 9 : 12}
-        
-        // ## FINAL POSITION ADJUSTMENT ##
-        // We are using a much larger positive number to guarantee the model is raised high enough.
-        // Feel free to adjust this value slightly (e.g., to 1.8 or 1.2) to get the perfect framing.
+
+        // ## THE FINAL, CORRECTED ADJUSTMENT TO MOVE THE MODEL UP ##
+        // Use a POSITIVE value for the Y-axis. Start with something like 1.5 and adjust.
         position={isMobile ? [0, 1.5, 0] : [0, 1.5, 0]}
 
         rotation={[0, 0.4, 0]}
