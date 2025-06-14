@@ -7,40 +7,28 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
-// Data science tech icons
-import aws from "./tech/aws.png";
-import azure from "./tech/azure.png";
-import databricks from "./tech/databricks.webp";
+import css from "./tech/css.png";
 import docker from "./tech/docker.png";
+import figma from "./tech/figma.png";
 import git from "./tech/git.png";
+import html from "./tech/html.png";
+import javascript from "./tech/javascript.png";
 import mongodb from "./tech/mongodb.png";
-import pandas from "./tech/pandas.svg";
-import powerbi from "./tech/power bi.png";
-import python from "./tech/python.png";
-import snowflake from "./tech/snowflake.png";
-import spark from "./tech/spark.webp";
-import sql from "./tech/sql.webp";
-import tableau from "./tech/Tableau_Symbol.png";
-
-// Keep threejs for 3D functionality
+import nodejs from "./tech/nodejs.png";
+import reactjs from "./tech/reactjs.png";
+import redux from "./tech/redux.png";
+import tailwind from "./tech/tailwind.png";
+import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
-// Company logos - FIXED SYRACUSE FILENAME
-import iconsult from "./company/starbucks.png";
-import syracuse from "./company/Syracuse_Orange_logo.svg.png"; // FIXED: Added .png at the end
-import ltimindtree from "./company/lti.png";
+import meta from "./company/meta.png";
+import shopify from "./company/shopify.png";
+import starbucks from "./company/starbucks.png";
+import tesla from "./company/tesla.png";
 
-// Legacy project images (if you still need them)
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
-
-// Your project images
-import flightFare from "./1644942089206.png";
-import eltPipeline from "./elt.png";
-import cyberPulse from "./cyber.jpeg";
-import sqlProject from "./sql.png";
-import electricity from "./south caro.webp";
 
 export {
   logo,
@@ -51,33 +39,24 @@ export {
   github,
   menu,
   close,
-  // Data science tech
-  aws,
-  azure,
-  databricks,
+  css,
   docker,
+  figma,
   git,
+  html,
+  javascript,
   mongodb,
-  pandas,
-  powerbi,
-  python,
-  snowflake,
-  spark,
-  sql,
-  tableau,
+  nodejs,
+  reactjs,
+  redux,
+  tailwind,
+  typescript,
   threejs,
-  // Companies
-  iconsult,
-  syracuse,
-  ltimindtree,
-  // Legacy projects
+  meta,
+  shopify,
+  starbucks,
+  tesla,
   carrent,
   jobit,
   tripguide,
-  // Your projects
-  flightFare,
-  eltPipeline,
-  cyberPulse,
-  sqlProject,
-  electricity,
 };
