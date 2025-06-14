@@ -10,8 +10,31 @@ const FaceModelObject = ({ isMobile }) => {
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
-    if (actions["Take 001"]) {
-      actions["Take 001"].play();
+    // Debug: Log available animations
+    console.log("Available animations:", animations);
+    console.log("Available actions:", actions);
+
+    // Try to play all animations
+    if (actions) {
+      // Get the first animation name
+      const animationNames = Object.keys(actions);
+      console.log("Animation names:", animationNames);
+
+      if (animationNames.length > 0) {
+        // Play the first animation
+        const firstAnimation = actions[animationNames[0]];
+        if (firstAnimation) {
+          firstAnimation.play();
+          // Optional: Set animation properties
+          firstAnimation.loop = true; // Loop the animation
+          firstAnimation.timeScale = 1; // Normal speed
+        }
+      }
+
+      // Alternative: Play all animations
+      // Object.values(actions).forEach(action => {
+      //   action.play();
+      // });
     }
   }, [actions]);
 
@@ -19,9 +42,9 @@ const FaceModelObject = ({ isMobile }) => {
     <group ref={group} dispose={null}>
       <primitive
         object={scene}
-        scale={isMobile ? 2.5 : 3} // Increased scale for close-up
-        position={isMobile ? [0, -4.5, 0] : [0, -5, 0]} // Adjusted to show face/shoulders
-        rotation={[0, 0, 0]} // Facing straight forward for passport style
+        scale={isMobile ? 2.5 : 3}
+        position={isMobile ? [0, -4.5, 0] : [0, -5, 0]}
+        rotation={[0, 0, 0]}
       />
     </group>
   );
@@ -41,11 +64,11 @@ const FaceCanvas = () => {
   return (
     <Canvas
       shadows
-      frameloop='demand'
+      frameloop='always' // Changed from 'demand' to 'always' for animations
       dpr={[1, 2]}
       camera={{ 
-        position: [0, 0, 2.5], // Very close camera for passport style
-        fov: 25, // Narrow FOV to reduce distortion
+        position: [0, 0, 2.5],
+        fov: 25,
         near: 0.1,
         far: 100
       }}
@@ -55,13 +78,12 @@ const FaceCanvas = () => {
         <OrbitControls
           enableZoom={false}
           enablePan={false}
-          target={[0, 0, 0]} // Focus on face level
-          maxPolarAngle={Math.PI / 2} // Limit vertical rotation
+          target={[0, 0, 0]}
+          maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
-          maxAzimuthAngle={0.5} // Limit horizontal rotation (passport style)
+          maxAzimuthAngle={0.5}
           minAzimuthAngle={-0.5}
         />
-        {/* Lighting setup for portrait */}
         <ambientLight intensity={0.6} />
         <directionalLight 
           position={[2, 2, 2]} 
@@ -72,7 +94,6 @@ const FaceCanvas = () => {
           position={[-2, 2, 2]} 
           intensity={0.5} 
         />
-        {/* Key light for face */}
         <spotLight
           position={[0, 2, 3]}
           angle={0.5}
