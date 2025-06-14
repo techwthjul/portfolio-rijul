@@ -14,12 +14,12 @@ const App = () => {
           <Hero />
         </div>
         <About />
-        <Education />      {/* After About */}
-        <Experience />     {/* Work Experience */}
+        <Education />
+        <Experience />
         <Tech />
-        <Works />          {/* Projects */}
-        <Certifications /> {/* After Projects */}
-        <Blogs />          {/* After Certifications */}
+        <Works />          {/* This is your Projects section */}
+        <Certifications />
+        <Blogs />
         <Feedbacks />
         <div className='relative z-0'>
           <Contact />
