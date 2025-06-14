@@ -1,6 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
-
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works } from "./components";
+// Remove or comment out StarsCanvas import:
+// import { StarsCanvas } from "./components";
 import Education from "./components/Education";
 import Certifications from "./components/Certifications";
 import Blogs from "./components/Blogs";
@@ -11,19 +12,19 @@ const App = () => {
       <div className='relative z-0 bg-primary'>
         <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
           <Navbar />
-          <Hero />
+          <Hero /> {/* Keep this - has your 3D computer */}
         </div>
         <About />
-        <Education />      {/* After About */}
-        <Experience />     {/* Work Experience */}
+        <Education />
+        <Experience />
         <Tech />
-        <Works />          {/* Projects */}
-        <Certifications /> {/* After Projects */}
-        <Blogs />          {/* After Certifications */}
+        <Works />
+        <Certifications />
+        <Blogs />
         <Feedbacks />
         <div className='relative z-0'>
           <Contact />
-          <StarsCanvas />
+          {/* Remove this line: <StarsCanvas /> */}
         </div>
       </div>
     </BrowserRouter>
