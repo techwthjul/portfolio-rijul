@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
-
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
+// Note: StarsCanvas is removed from the import list
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works } from "./components";
 import Education from "./components/Education";
 import Certifications from "./components/Certifications";
 import Blogs from "./components/Blogs";
@@ -17,17 +17,17 @@ const App = () => {
         <Education />
         <Experience />
         <Tech />
-        <Works />          {/* This is your Projects section */}
+        <Works />
         <Certifications />
         <Blogs />
         <Feedbacks />
         <div className='relative z-0'>
           <Contact />
-          <StarsCanvas />
+          {/* StarsCanvas is removed from here */}
         </div>
       </div>
     </BrowserRouter>
   );
-}
+};
 
 export default App;
