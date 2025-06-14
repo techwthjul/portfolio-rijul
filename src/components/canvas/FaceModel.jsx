@@ -1,6 +1,7 @@
-import React, { Suspense, useEffect, useRef, useState } from "react";
+import React, { Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF, useAnimations } from "@react-three/drei";
+import * as THREE from "three"; // We need to import the core three.js library
 
 import CanvasLoader from "../Loader";
 
@@ -9,9 +10,20 @@ const FaceModelObject = ({ isMobile }) => {
   const { scene, animations } = useGLTF("./FaceModel.glb");
   const { actions } = useAnimations(animations, group);
 
+  // This layout effect will run once and center the model
+  useLayoutEffect(() => {
+    // ## AUTO-CENTERING LOGIC ##
+    // 1. Calculate the bounding box of the entire model
+    const box = new THREE.Box3().setFromObject(scene);
+    // 2. Calculate the center of that box
+    const center = box.getCenter(new THREE.Vector3());
+    // 3. Move the model's scene so its center is at the origin [0, 0, 0]
+    scene.position.sub(center);
+  }, [scene]);
+
   useEffect(() => {
     if (actions["Take 001"]) {
-        actions["Take 001"].play();
+      actions["Take 001"].play();
     }
   }, [actions]);
 
@@ -20,17 +32,16 @@ const FaceModelObject = ({ isMobile }) => {
       <primitive
         object={scene}
         scale={isMobile ? 9 : 12}
-
-        // ## THE FINAL, CORRECTED ADJUSTMENT TO MOVE THE MODEL UP ##
-        // Use a POSITIVE value for the Y-axis. Start with something like 1.5 and adjust.
-        position={isMobile ? [0, 1.5, 0] : [0, 1.5, 0]}
-
+        // Now that the model is centered, we can use small, predictable values here.
+        // A slight negative Y will move the centered face down into frame.
+        position={isMobile ? [0, -0.5, 0] : [0, -0.5, 0]}
         rotation={[0, 0.4, 0]}
       />
     </group>
   );
 };
 
+// The Canvas setup below remains the same
 const FaceCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
