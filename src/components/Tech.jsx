@@ -1,11 +1,10 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Preload } from "@react-three/drei";
+import { OrbitControls, Preload } from "@react-three/drei";
 
 import { technologies } from "../constants";
 import { SectionWrapper } from "../hoc";
 import Ball from "./canvas/Ball";
-// This is the corrected import path for the Loader
 import CanvasLoader from "./Loader";
 
 const Tech = () => {
@@ -20,10 +19,13 @@ const Tech = () => {
     >
       <Canvas frameloop='demand' dpr={[1, 2]} gl={{ preserveDrawingBuffer: true }}>
         <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls enableZoom={false} />
+
+          {/* We are mapping over the technologies and rendering a Ball for each */}
           {technologies.map((technology, index) => {
             const row = Math.floor(index / ballsPerRow);
             const col = index % ballsPerRow;
-            
+
             return (
               <group
                 key={technology.name}
@@ -33,6 +35,9 @@ const Tech = () => {
                   0
                 ]}
               >
+                {/* The Ball component itself has some lights, but we add a main scene light here */}
+                <ambientLight intensity={1} />
+                <directionalLight position={[1, 1, 1]} />
                 <Ball imgUrl={technology.icon} />
               </group>
             );
