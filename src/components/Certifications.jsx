@@ -4,9 +4,9 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { certifications } from "../constants";
-import { github } from "../assets"; // We'll use this as a placeholder for verify icon
+import { github } from "../assets";
 
-const CertificationCard = ({ index, name, organization, date, credential, image, verify_link }) => {
+const CertificationCard = ({ index, name, organization, date, image, verify_link }) => {
   return (
     <motion.div
       variants={fadeIn("", "spring", index * 0.5, 0.75)}
@@ -27,7 +27,7 @@ const CertificationCard = ({ index, name, organization, date, credential, image,
               className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
             >
               <img
-                src={github} // You can add a verify icon instead
+                src={github}
                 alt='verify'
                 className='w-1/2 h-1/2 object-contain'
               />
@@ -39,14 +39,7 @@ const CertificationCard = ({ index, name, organization, date, credential, image,
       <div className='mt-5'>
         <h3 className='text-white font-bold text-[24px]'>{name}</h3>
         <p className='mt-2 text-secondary text-[14px]'>{organization}</p>
-        <div className='mt-2 flex justify-between items-center'>
-          <p className='text-secondary text-[12px]'>{date}</p>
-          {credential && (
-            <p className='text-[#915EFF] text-[12px]'>
-              {credential === "In Progress" ? "In Progress" : `ID: ${credential}`}
-            </p>
-          )}
-        </div>
+        <p className='mt-2 text-secondary text-[12px]'>{date}</p>
         
         {/* Verify link as text button */}
         {verify_link && verify_link !== "#" && (

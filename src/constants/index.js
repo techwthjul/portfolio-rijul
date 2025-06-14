@@ -281,44 +281,39 @@ const projects = [
 
 const certifications = [
   {
-    name: "AWS Cloud Practitioner",
-    organization: "Amazon Web Services",
-    date: "2024",
-    credential: "Your-Credential-ID",
-    image: aws,
-    verify_link: "https://www.credly.com/badges/your-aws-badge", // Add your actual verification link
-  },
-  {
-    name: "Microsoft Azure Fundamentals (AZ-900)",
-    organization: "Microsoft",
-    date: "2024",
-    credential: "Your-Credential-ID",
-    image: azure,
-    verify_link: "https://www.credly.com/badges/your-azure-fundamentals", // Add your actual link
-  },
-  {
-    name: "Microsoft Azure Administrator Associate",
-    organization: "Microsoft",
-    date: "2024",
-    credential: "Your-Credential-ID",
-    image: azure,
-    verify_link: "https://www.credly.com/badges/your-azure-admin", // Add your actual link
-  },
-  {
     name: "Tableau Desktop Specialist",
     organization: "Tableau",
-    date: "2024",
-    credential: "Your-Credential-ID",
+    date: "Issued: Feb 2025",
     image: tableau,
-    verify_link: "https://www.credly.com/badges/your-tableau-cert", // Add your actual link
+    verify_link: "#", // Replace with your actual Credly link when available
+  },
+  {
+    name: "Microsoft Certified: Azure Administrator Associate",
+    organization: "Microsoft",
+    date: "Issued: Oct 2022 | Expired: Oct 2023",
+    image: azure,
+    verify_link: "#", // Replace with your actual Credly link
+  },
+  {
+    name: "Microsoft Certified: Azure Fundamentals",
+    organization: "Microsoft",
+    date: "Issued: Sep 2022",
+    image: azure,
+    verify_link: "#", // Replace with your actual Credly link
+  },
+  {
+    name: "AWS Certified Cloud Practitioner",
+    organization: "Amazon Web Services",
+    date: "Issued: May 2022 | Expires: May 2025",
+    image: aws,
+    verify_link: "#", // Replace with your actual Credly link
   },
   {
     name: "Databricks Data Engineer Associate",
     organization: "Databricks",
     date: "Pursuing",
-    credential: "In Progress",
     image: databricks,
-    verify_link: "#", // No link for in-progress certification
+    verify_link: "#",
   },
 ];
 
