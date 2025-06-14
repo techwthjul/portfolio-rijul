@@ -35,8 +35,20 @@ export const navLinks = [
     title: "About",
   },
   {
+    id: "education",
+    title: "Education",
+  },
+  {
     id: "work",
-    title: "Work",
+    title: "Experience",
+  },
+  {
+    id: "projects",
+    title: "Projects",
+  },
+  {
+    id: "blogs",
+    title: "Blogs",
   },
   {
     id: "contact",
@@ -118,11 +130,43 @@ const technologies = [
   },
 ];
 
+const education = [
+  {
+    degree: "Master of Science in Information Systems",
+    school_name: "Syracuse University, NY, USA",
+    icon: syracuse,
+    iconBg: "#E6DEDD",
+    date: "Expected Graduation - August 2025",
+    gpa: "3.78/4.0",
+    courses: [
+      "Introduction to Data Science (R Programming)",
+      "Database Management System (SQL, NoSQL)",
+      "Cloud Management (AWS, Azure)",
+      "Applied Machine Learning (Python, PySpark)",
+      "Business Analysis (Excel, Tableau, PowerBI)",
+    ],
+  },
+  {
+    degree: "Bachelor of Engineering in Electronics Engineering",
+    school_name: "University of Mumbai, Mumbai, India",
+    icon: iconsult, // You can add a Mumbai University logo later
+    iconBg: "#383E56",
+    date: "Graduated - August 2022",
+    gpa: "3.4/4.0",
+    courses: [
+      "Data Structures & Algorithms",
+      "Database Management System",
+      "Object Oriented Programming",
+      "Electrical Networking Systems",
+    ],
+  },
+];
+
 const experiences = [
   {
     title: "Data Engineer Intern",
     company_name: "iConsult Collaborative",
-    icon: syracuse, // Using Syracuse logo for iConsult as requested
+    icon: syracuse,
     iconBg: "#383E56",
     date: "November 2024 - Present",
     points: [
@@ -136,7 +180,7 @@ const experiences = [
   {
     title: "Teaching Assistant",
     company_name: "Syracuse University",
-    icon: syracuse, // Syracuse logo for Teaching Assistant
+    icon: syracuse,
     iconBg: "#E6DEDD",
     date: "January 2024 - May 2024",
     points: [
@@ -147,7 +191,7 @@ const experiences = [
   {
     title: "Cloud Infrastructure Engineer",
     company_name: "LTIMindtree",
-    icon: ltimindtree, // LTIMindtree logo as requested
+    icon: ltimindtree,
     iconBg: "#383E56",
     date: "July 2022 - June 2023",
     points: [
@@ -235,4 +279,119 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+const certifications = [
+  {
+    name: "AWS Cloud Practitioner",
+    organization: "Amazon Web Services",
+    date: "2024",
+    credential: "Your-Credential-ID",
+    image: aws,
+    verify_link: "https://www.credly.com/badges/your-aws-badge", // Add your actual verification link
+  },
+  {
+    name: "Microsoft Azure Fundamentals (AZ-900)",
+    organization: "Microsoft",
+    date: "2024",
+    credential: "Your-Credential-ID",
+    image: azure,
+    verify_link: "https://www.credly.com/badges/your-azure-fundamentals", // Add your actual link
+  },
+  {
+    name: "Microsoft Azure Administrator Associate",
+    organization: "Microsoft",
+    date: "2024",
+    credential: "Your-Credential-ID",
+    image: azure,
+    verify_link: "https://www.credly.com/badges/your-azure-admin", // Add your actual link
+  },
+  {
+    name: "Tableau Desktop Specialist",
+    organization: "Tableau",
+    date: "2024",
+    credential: "Your-Credential-ID",
+    image: tableau,
+    verify_link: "https://www.credly.com/badges/your-tableau-cert", // Add your actual link
+  },
+  {
+    name: "Databricks Data Engineer Associate",
+    organization: "Databricks",
+    date: "Pursuing",
+    credential: "In Progress",
+    image: databricks,
+    verify_link: "#", // No link for in-progress certification
+  },
+];
+
+const blogs = [
+  {
+    title: "Building Scalable ETL Pipelines with Apache Airflow and DBT",
+    description:
+      "A comprehensive guide on implementing production-ready data pipelines using modern data stack tools. Learn how to orchestrate complex workflows and ensure data quality.",
+    tags: [
+      {
+        name: "DataEngineering",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Airflow",
+        color: "green-text-gradient",
+      },
+      {
+        name: "DBT",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: eltPipeline,
+    blog_link: "https://medium.com/@rijulu17ugawekar", // Update when you publish this article
+    date: "Jan 2024",
+    read_time: "8 min read",
+  },
+  {
+    title: "Real-time Threat Detection using Machine Learning",
+    description:
+      "Exploring how XGBoost and feature engineering can be used to build an effective cybersecurity threat detection system with high accuracy.",
+    tags: [
+      {
+        name: "MachineLearning",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Cybersecurity",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Python",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: cyberPulse,
+    blog_link: "https://medium.com/@rijulu17ugawekar", // Update when you publish this article
+    date: "Dec 2023",
+    read_time: "6 min read",
+  },
+  {
+    title: "Dynamic Pricing Strategies in Aviation using ML",
+    description:
+      "An in-depth analysis of how machine learning models can optimize airline pricing strategies based on demand patterns and seasonality.",
+    tags: [
+      {
+        name: "ML",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Pricing",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Aviation",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: flightFare,
+    blog_link: "https://medium.com/@rijulu17ugawekar", // Update when you publish this article
+    date: "Nov 2023",
+    read_time: "10 min read",
+  },
+];
+
+export { services, technologies, education, experiences, testimonials, projects, certifications, blogs };
