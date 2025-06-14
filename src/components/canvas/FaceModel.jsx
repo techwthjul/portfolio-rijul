@@ -1,28 +1,67 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, Preload, useGLTF, useAnimations } from "@react-three/drei";
 
-// This is our test object: a simple red box.
-// We are NOT loading your .glb file at all in this test.
-const TestBox = () => {
+import CanvasLoader from "../Loader";
+
+const FaceModelObject = ({ isMobile }) => {
+  const group = useRef();
+  const { scene, animations } = useGLTF("./FaceModel.glb");
+  const { actions } = useAnimations(animations, group);
+
+  useEffect(() => {
+    if (actions["Take 001"]) {
+        actions["Take 001"].play();
+    }
+  }, [actions]);
+
   return (
-    <mesh>
-      <boxGeometry args={[2, 2, 2]} />
-      <meshStandardMaterial color="red" />
-    </mesh>
+    <group ref={group} dispose={null}>
+      <primitive
+        object={scene}
+        scale={isMobile ? 9 : 12}
+        
+        // ## FINAL POSITION ADJUSTMENT ##
+        // We are using a much larger positive number to guarantee the model is raised high enough.
+        // Feel free to adjust this value slightly (e.g., to 1.8 or 1.2) to get the perfect framing.
+        position={isMobile ? [0, 1.5, 0] : [0, 1.5, 0]}
+
+        rotation={[0, 0.4, 0]}
+      />
+    </group>
   );
 };
 
-// The rest of the file is a standard canvas setup.
 const FaceCanvas = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    setIsMobile(mediaQuery.matches);
+    const handleMediaQueryChange = (event) => setIsMobile(event.matches);
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+    return () => mediaQuery.removeEventListener("change", handleMediaQueryChange);
+  }, []);
+
   return (
-    <Canvas>
-      <Suspense fallback={null}>
-        <OrbitControls enableZoom={true} />
+    <Canvas
+      shadows
+      frameloop='demand'
+      dpr={[1, 2]}
+      camera={{ position: [20, 3, 5], fov: 25 }}
+      gl={{ preserveDrawingBuffer: true }}
+    >
+      <Suspense fallback={<CanvasLoader />}>
+        <OrbitControls
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+        />
         <ambientLight intensity={0.5} />
-        <directionalLight position={[10, 10, 5]} intensity={1} />
-        <TestBox />
+        <directionalLight position={[5, 5, 5]} intensity={1} />
+        <FaceModelObject isMobile={isMobile} />
       </Suspense>
+      <Preload all />
     </Canvas>
   );
 };
