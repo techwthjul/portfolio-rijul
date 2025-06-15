@@ -183,7 +183,7 @@ const experiences = [
     company_name: "Syracuse University",
     icon: syracuse,
     iconBg: "#E6DEDD",
-    date: "January 2024 - May 2024",
+    date: "January 2024 - Dec 2024",
     points: [
       "Collaborated with UK startups to guide sentiment analysis using R (tidytext, afinn) and A/B testing via Brevo.",
       "Optimized email campaigns by analyzing emotional tone, subject lines, CTAs, and send-time performance.",
