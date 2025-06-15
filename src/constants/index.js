@@ -133,7 +133,7 @@ const technologies = [
 
 const education = [
   {
-    degree: "Master of Science in Information Systems",
+    degree: "Master of Science in Information Systems Specialization in Data Science",
     school_name: "Syracuse University, New York, USA",
     icon: syracuse,
     iconBg: "#E6DEDD",
