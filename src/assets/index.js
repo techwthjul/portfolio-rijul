@@ -39,6 +39,10 @@ import iconsult from "./company/starbucks.png";
 import syracuse from "./Syracuse_Orange_logo.svg.png"; // FIXED: Corrected path and removed extra .svg
 import ltimindtree from "./company/lti.png";
 
+//Education: 
+
+import bachelors from "./bachelors.png";
+
 // Legacy project images for compatibility
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -53,6 +57,7 @@ import electricity from "./south caro.webp";
 
 export {
   logo,
+  bachelors,
   backend,
   creator,
   mobile,

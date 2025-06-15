@@ -27,6 +27,7 @@ import {
   iconsult,
   syracuse,
   ltimindtree,
+  bachelors,
 } from "../assets";
 
 export const navLinks = [
@@ -133,10 +134,10 @@ const technologies = [
 const education = [
   {
     degree: "Master of Science in Information Systems",
-    school_name: "Syracuse University, NY, USA",
+    school_name: "Syracuse University, New York, USA",
     icon: syracuse,
     iconBg: "#E6DEDD",
-    date: "Expected Graduation - August 2025",
+    date: "Graduated - May 2025",
     gpa: "3.78/4.0",
     courses: [
       "Introduction to Data Science (R Programming)",
@@ -149,7 +150,7 @@ const education = [
   {
     degree: "Bachelor of Engineering in Electronics Engineering",
     school_name: "University of Mumbai, Mumbai, India",
-    icon: iconsult, // You can add a Mumbai University logo later
+    icon: bachelors, // Changed from iconsult to bachelors
     iconBg: "#383E56",
     date: "Graduated - August 2022",
     gpa: "3.4/4.0",
